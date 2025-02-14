@@ -43,7 +43,7 @@ const Header: React.FC = () => {
         <div className="hidden md:flex space-x-8">
           {[
             { name: "About", href: "#about" },
-            { name: "Toknomic", href: "#token-allocation" },
+            { name: "Tokenomic", href: "#token-allocation" },
             { name: "TokenUtility", href: "#token-utility" },
             { name: "Faqs", href: "#faqs" },
           ].map((item) => (
