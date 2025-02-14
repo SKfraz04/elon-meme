@@ -129,7 +129,7 @@ const Hero: React.FC = () => {
                 <span className="text-base-content gradient-text relative">
                   THE ONLY
                   OFFICIAL
-                  Elon MEME
+                  IELON MEME
                 </span>
               </h1>
             </motion.div>
@@ -303,7 +303,7 @@ const Hero: React.FC = () => {
                           before:absolute before:inset-0 before:z-10 before:bg-gradient-to-t 
                           before:from-black/40 before:via-transparent before:to-transparent">
               <Image
-                src="/assets/founder.jpeg"
+                src="/assets/f1.jpg"
                 alt="Founder"
                 fill
                 className="object-cover rounded-[2rem] transition-transform duration-700 hover:scale-110"

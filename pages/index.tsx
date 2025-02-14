@@ -11,8 +11,8 @@ import Roadmap from '../components/Roadmap';
 import TokenUtility from '../components/TokenUtility';
 import FAQ from '../components/FAQ';
 import { Toaster } from 'react-hot-toast';
-import UseCase from '../components/UseCase';
 import Gallery from '../components/Gallery';
+import Partners from '@/components/Partners';
 
 const geistSansFont = GeistSans.className
 const geistMonoFont = GeistMono.className
@@ -30,11 +30,11 @@ const Home: NextPage = () => {
         <Header />
         <Hero />
         <About />
-        <UseCase />
         <Gallery />
         <TokenAllocation />
         <TokenUtility />
         <Roadmap />
+        <Partners />
         <FAQ />
       </main>
       <Toaster

@@ -38,14 +38,13 @@ const Header: React.FC = () => {
           whileHover={{ scale: 1.05 }}
           className="text-2xl font-bold gradient-text font-magistral"
         >
-         ELON MEME
+         IELON MEME
         </motion.div>
         <div className="hidden md:flex space-x-8">
           {[
             { name: "About", href: "#about" },
             { name: "Toknomic", href: "#token-allocation" },
             { name: "TokenUtility", href: "#token-utility" },
-            { name: "UseCases", href: "#usecase" },
             { name: "Faqs", href: "#faqs" },
           ].map((item) => (
             <motion.a

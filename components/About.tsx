@@ -28,9 +28,9 @@ const About = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className={`${styles.title} gradient-text`}
+          className={`${styles.title} `}
         >
-          About X Coin
+         Inspector Elon (IELON) – The Government's Only Hope!
         </motion.h2>
         
         <div className={styles.content}>
