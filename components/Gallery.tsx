@@ -15,7 +15,7 @@ const galleryItems = [
   },
   {
     id: 2,
-    image: '/assets/g1.webp',
+    image: '/assets/g2.webp',
     title: 'Smart Contracts',
     description: 'Secure and efficient smart contract implementation',
   },
