@@ -11,7 +11,7 @@
 
 .title {
   text-align: center;
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-bottom: 4rem;
   background: linear-gradient(90deg,#ffffff,#f1f1f1 51.04%,#ffffff);
   background-clip: text;
@@ -50,17 +50,17 @@
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  padding: 2rem;
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 15px;
-  transition: transform 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
 }
 
 .card:hover {
   transform: translateY(-10px);
-  background: rgba(255, 255, 255, 0.1);
 }
 
 .cardIcon {
@@ -76,6 +76,33 @@
 
 .cardDescription {
   color: #cccccc;
+  line-height: 1.6;
+}
+
+.headerContainer {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.mainTitle {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.subheading {
+  font-size: 1.5rem;
+  color: #e5e5e5;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: #c8c8c8;
+  max-width: 800px;
+  margin: 0 auto;
   line-height: 1.6;
 }
 

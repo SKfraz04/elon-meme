@@ -5,44 +5,78 @@ import styles from '../styles/About.module.css';
 const About = () => {
   const cards = [
     {
-      title: "X Coin",
-      description: "The revolutionary cryptocurrency by Elon Musk, designed to transform digital payments and financial inclusion.",
+      title: "Mission Recovery",
+      description: "Using cutting-edge meme technology to track and recover misused government funds.",
+      icon: "🔍"
+    },
+    {
+      title: "Laser Focus",
+      description: "Employing laser-eyed determination to investigate and optimize government spending.",
+      icon: "👀"
+    },
+    {
+      title: "Meme Power",
+      description: "Harnessing the power of viral memes to bring transparency to public finances.",
       icon: "🚀"
     },
     {
-      title: "Innovation",
-      description: "Built on cutting-edge blockchain technology, offering unprecedented speed and security.",
-      icon: "💡"
-    },
-    {
-      title: "Ecosystem",
-      description: "Seamlessly integrated with X (formerly Twitter) and Tesla's future payment systems.",
-      icon: "🌐"
+      title: "Crypto Sleuths",
+      description: "Utilizing blockchain and AI to expose inefficiencies and hold agencies accountable.",
+      icon: "💰"
     }
   ];
 
   return (
     <section className={styles.aboutSection} id="about">
       <div className={styles.container}>
-        <motion.h2 
-          initial={{ opacity: 0, y: 20 }}
+        <motion.div
+          initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className={`${styles.title} `}
+          transition={{ duration: 0.8 }}
+          className={styles.headerContainer}
         >
-         Inspector Elon (IELON) – The Government's Only Hope!
-        </motion.h2>
+          <motion.h1 
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className={`${styles.title} `}
+          >
+            Inspector Elon (IELON) – The Government's Only Hope!
+          </motion.h1>
+          
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className={styles.subheading}
+          >
+            The Mission: Recovering US Government Funds, One Meme at a Time!
+          </motion.p>
+          
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className={styles.description}
+          >
+            In a world full of wasted budgets, endless investigations, and questionable spending, 
+            only one hero can bring order to the chaos… Inspector Elon! With his laser-eyed determination, 
+            flame-throwing tweets, and meme-powered detective skills, he's here to sniff out inefficiency 
+            and recover lost taxpayer dollars like a true government watchdog.
+          </motion.p>
+        </motion.div>
         
         <div className={styles.content}>
           <motion.div 
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
             className={styles.imageContainer}
+            whileHover={{ scale: 1.05 }}
           >
             <Image
               src="/assets/founder.jpeg"
-              alt="Elon Musk"
+              alt="Inspector Elon"
               width={400}
               height={400}
               className={styles.image}
@@ -54,8 +88,12 @@ const About = () => {
                 key={card.title}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
+                transition={{ duration: 0.6, delay: 0.8 + index * 0.2 }}
                 className={styles.card}
+                whileHover={{ 
+                  scale: 1.05,
+                  boxShadow: "0 10px 20px rgba(0,0,0,0.2)"
+                }}
               >
                 <div className={styles.cardIcon}>{card.icon}</div>
                 <h3 className={styles.cardTitle}>{card.title}</h3>

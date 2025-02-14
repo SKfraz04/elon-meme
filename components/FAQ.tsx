@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import styles from '../styles/FAQ.module.css';
 import { motion, AnimatePresence } from 'framer-motion';
+import { FiPlus, FiMinus } from 'react-icons/fi';
 
 interface FAQItem {
     question: string;
@@ -9,24 +10,24 @@ interface FAQItem {
 
 const faqData: FAQItem[] = [
     {
-        question: "What is ELON MEME Token?",
-        answer: "ELON MEME Token is a community-driven cryptocurrency that combines meme culture with blockchain technology, offering unique features and opportunities for holders."
+        question: "What is Inspector Elon (IELON)?",
+        answer: "Inspector Elon (IELON) is a Solana-based meme coin inspired by the idea of investigating government inefficiencies while having fun with memes and crypto culture. IELON is a burnable token with a fixed supply of 500 million, ensuring scarcity and value over time."
     },
     {
-        question: "How can I buy ELON MEME Token?",
-        answer: "You can buy ELON MEME Token through various decentralized exchanges (DEX) like Uniswap. Make sure you have a Web3 wallet like MetaMask set up with ETH for the transaction."
+        question: "Where Can I Buy IELON?",
+        answer: "Once launched, IELON will be available on Solana-compatible decentralized exchanges (DEXs) such as: 'Raydium', 'Orca', 'Meteora'. We will announce the exact launch details and exchange listings on our official channels. Stay tuned!"
     },
     {
-        question: "Is ELON MEME Token secure?",
-        answer: "ELON MEME Token's smart contract has undergone thorough auditing by leading security firms. We prioritize the safety and security of our holders' investments."
+        question: "What Makes IELON Different from Other Meme Coins?",
+        answer: "Unlike typical meme coins, IELON has a mission—to expose inefficiencies in government spending in a fun and engaging way. We blend humor, blockchain technology, and community engagement to create a meme movement rather than just another token. Plus, no further minting ensures that your bags don’t get diluted!"
     },
     {
-        question: "What makes ELON MEME Token unique?",
-        answer: "ELON MEME Token stands out through its strong community focus, innovative tokenomics, and commitment to long-term growth and sustainability in the crypto space."
+        question: "Is Inspector Elon (IELON) Safe?",
+        answer: "Yes! IELON is built on Solana, a fast, low-fee, and highly scalable blockchain. We have a fixed supply, no minting functions, and a transparent smart contract to ensure fair and secure tokenomics. However, always DYOR (Do Your Own Research) before investing!"
     },
     {
-        question: "What are the tokenomics?",
-        answer: "Our tokenomics are designed for sustainable growth, including features like automatic liquidity generation, holder rewards, and anti-whale mechanisms."
+        question: "What Are the Future Plans for IELON?",
+        answer: "Future Plans for IELON: DEX & CEX Listings 🔄 | Community-Driven Burn Events 🔥 | Meme Contests & Giveaways 🎭 | Government Spending Watchlist & Tracking Tools 🕵️‍♂️ | Possible Collaborations with Other Meme Coin Projects 🤝"
     }
 ];
 
@@ -55,7 +56,7 @@ const FAQ = () => {
                                     className={styles.icon}
                                     animate={{ rotate: activeIndex === index ? 180 : 0 }}
                                 >
-                                    ↓
+                                    {activeIndex === index ? <FiMinus /> : <FiPlus />}
                                 </motion.span>
                             </button>
                             <AnimatePresence>

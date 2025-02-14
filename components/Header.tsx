@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { motion } from "framer-motion";
 import {  Righteous } from "next/font/google";
 import { FaTwitter, FaTelegram, FaFacebook } from 'react-icons/fa';
-import Link from 'next/link';
+import { RiTwitterXFill } from "react-icons/ri";
 
 const righteous = Righteous({
   weight: '400',
@@ -38,7 +38,7 @@ const Header: React.FC = () => {
           whileHover={{ scale: 1.05 }}
           className="text-2xl font-bold gradient-text font-magistral"
         >
-         IELON MEME
+         IELON
         </motion.div>
         <div className="hidden md:flex space-x-8">
           {[
@@ -61,7 +61,7 @@ const Header: React.FC = () => {
         <div className="flex items-center space-x-4">
           <a href="https://twitter.com/yourproject" target="_blank" rel="noopener noreferrer" 
             className="text-white hover:text-primary-500 transition-colors">
-            <FaTwitter size={24} />
+            <RiTwitterXFill size={24} />
           </a>
           <a href="https://t.me/yourproject" target="_blank" rel="noopener noreferrer" 
             className="text-white hover:text-primary-500 transition-colors">

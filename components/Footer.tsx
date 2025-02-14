@@ -1,30 +1,31 @@
+import { FaFacebook, FaTelegram } from "react-icons/fa";
+import { RiTwitterXFill } from "react-icons/ri";
 const Footer = () => {
   return (
     <footer className="bg-black/80 text-white py-8">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className=" text-center">
+         
           <div>
-            <h3 className="text-xl font-bold mb-4">About</h3>
-            <p className="text-gray-300">
-              Your portfolio description here. Share a brief introduction about yourself or your work.
-            </p>
-          </div>
-          <div>
-            <h3 className="text-xl font-bold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              <li><a href="/" className="text-gray-300 hover:text-white">Home</a></li>
-              <li><a href="/about" className="text-gray-300 hover:text-white">About</a></li>
-              <li><a href="/projects" className="text-gray-300 hover:text-white">Projects</a></li>
-              <li><a href="/contact" className="text-gray-300 hover:text-white">Contact</a></li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-xl font-bold mb-4">Connect</h3>
-            <ul className="space-y-2">
-              <li><a href="#" className="text-gray-300 hover:text-white">GitHub</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white">LinkedIn</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white">Twitter</a></li>
-            </ul>
+            <h3 className="text-xl font-bold mb-4">Join The Investigation!</h3>
+            <div className="flex items-center justify-center space-x-4">
+          <a href="https://twitter.com/yourproject" target="_blank" rel="noopener noreferrer" 
+            className="text-white hover:text-primary-500 transition-colors">
+            <RiTwitterXFill size={24} />
+          </a>
+          <a href="https://t.me/yourproject" target="_blank" rel="noopener noreferrer" 
+            className="text-white hover:text-primary-500 transition-colors">
+            <FaTelegram size={24} />
+          </a>
+          <a href="https://facebook.com/yourproject" target="_blank" rel="noopener noreferrer" 
+            className="text-white hover:text-primary-500 transition-colors">
+            <FaFacebook size={24} />
+          </a>
+          <a href="https://facebook.com/yourproject" target="_blank" rel="noopener noreferrer" 
+            className="text-white hover:text-primary-500 transition-colors">
+            <img src='/assets/radium.webp' alt='radium' className='w-6 h-6' />
+          </a>
+        </div>
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-gray-800 text-center">
