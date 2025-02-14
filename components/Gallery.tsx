@@ -21,7 +21,7 @@ const galleryItems = [
   },
   {
     id: 3,
-    image: '/assets/g1.webp',
+    image: '/assets/g3.webp',
     title: 'DeFi Integration',
     description: 'Seamless integration with DeFi protocols',
   },
