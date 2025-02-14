@@ -129,7 +129,7 @@ const Hero: React.FC = () => {
                 <span className="text-base-content gradient-text relative">
                   THE ONLY
                   OFFICIAL
-                  IELON MEME
+                  IELON 
                 </span>
               </h1>
             </motion.div>
