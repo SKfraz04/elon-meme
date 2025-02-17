@@ -65,7 +65,7 @@ const CoinDetails = () => {
             className="relative"
           >
             <div className="w-3/4 mx-auto aspect-square relative">
-             <img src='/assets/elon-fun2.jpg' alt='tokenomics' className='w-full h-full' />
+             <img src='/assets/token2.jpg' alt='tokenomics' className='w-full h-full' />
             </div>
           </motion.div>
         </motion.div>

@@ -33,7 +33,7 @@ const Home: NextPage = () => {
         <About />
         <Gallery />
         <TokenAllocation />
-        <TokenUtility />
+        {/* <TokenUtility /> */}
         <CoinDetails />
         <Roadmap />
         <Partners />

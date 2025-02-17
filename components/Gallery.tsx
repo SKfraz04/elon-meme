@@ -10,22 +10,30 @@ const galleryItems = [
   {
     id: 1,
     image: '/assets/g1.webp',
-    title: 'Project Alpha',
-    description: 'Revolutionary blockchain solution for enterprise',
   },
   {
     id: 2,
     image: '/assets/g2.webp',
-    title: 'Smart Contracts',
-    description: 'Secure and efficient smart contract implementation',
   },
   {
     id: 3,
     image: '/assets/g3.webp',
-    title: 'DeFi Integration',
-    description: 'Seamless integration with DeFi protocols',
   },
-  // Add more gallery items as needed
+  {
+    id: 4,
+    image: '/assets/g4.webp',
+  },
+  {
+    id: 5,
+    image: '/assets/g5.jpg',
+  },{
+    id: 6,
+    image: '/assets/g6.png',
+  },
+  {
+    id: 7,
+    image: '/assets/g7.webp',
+  },
 ];
 
 const Gallery = () => {
@@ -38,11 +46,17 @@ const Gallery = () => {
         
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
-          spaceBetween={30}
+          spaceBetween={20}
           slidesPerView={1}
           navigation
           pagination={{ clickable: true }}
-          autoplay={{ delay: 5000 }}
+          autoplay={{ 
+            delay: 3000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true
+          }}
+          speed={1500}
+          loop={true}
           breakpoints={{
             640: {
               slidesPerView: 2,
@@ -51,28 +65,20 @@ const Gallery = () => {
               slidesPerView: 3,
             },
           }}
-          className="gallery-swiper"
+          className="gallery-swiper [&_.swiper-slide]:transition-transform [&_.swiper-slide]:duration-300"
         >
           {galleryItems.map((item) => (
             <SwiperSlide key={item.id}>
-              <div className="bg-gray-800 rounded-xl overflow-hidden transform transition-transform hover:scale-105 duration-300">
-                <div className="relative h-64">
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-white mb-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-gray-300">
-                    {item.description}
-                  </p>
-                </div>
+              <div className="relative h-80 group">
+                <Image
+                  src={item.image}
+                  alt={`Gallery image ${item.id}`}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover rounded-2xl border-2 border-purple-500/30 shadow-xl shadow-purple-500/20 
+                    transition-all duration-300 group-hover:scale-105 group-hover:border-purple-500/50"
+                  priority
+                />
               </div>
             </SwiperSlide>
           ))}

@@ -129,7 +129,7 @@ const Hero: React.FC = () => {
                 <span className="text-base-content gradient-text relative">
                   THE ONLY
                   OFFICIAL
-                  IELON 
+                  IELON
                 </span>
               </h1>
             </motion.div>
@@ -140,13 +140,11 @@ const Hero: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-lg md:text-xl leading-relaxed text-base-content/80 max-w-xl"
             >
-              Welcome to SecCoin - Where innovation meets security. Experience the next
-              generation of cryptocurrency management with enterprise-grade protection
-              and intuitive controls.
+              Welcome to IELON – Where innovation meets government transparency and security. Experience the next generation of cryptocurrency management with enterprise-grade protection, intuitive controls, and a commitment to recovering misused public funds.
             </motion.p>
 
             {/* Adding Buy Buttons */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
@@ -171,25 +169,25 @@ const Hero: React.FC = () => {
                     ABC123...XYZ789
                   </p>
                 </div>
-                <button 
+                <button
                   onClick={() => {
                     handleCopy();
                     // You might want to add a toast notification here
                   }}
                   className="p-2 hover:bg-base-300 rounded-lg transition-colors duration-200"
                 >
-                  <svg 
-                    xmlns="http://www.w3.org/2000/svg" 
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
                     className="h-5 w-5 text-base-content/60 hover:text-base-content"
-                    fill="none" 
-                    viewBox="0 0 24 24" 
+                    fill="none"
+                    viewBox="0 0 24 24"
                     stroke="currentColor"
                   >
-                    <path 
-                      strokeLinecap="round" 
-                      strokeLinejoin="round" 
-                      strokeWidth={2} 
-                      d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" 
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
                     />
                   </svg>
                 </button>

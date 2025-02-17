@@ -33,7 +33,7 @@ const Header: React.FC = () => {
       animate={{ y: 0 }}
       className={`${righteous.className} fixed w-full top-0 z-50 bg-black/50 backdrop-blur-md`}
     >
-      <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <motion.div
           whileHover={{ scale: 1.05 }}
           className="text-2xl font-bold gradient-text font-magistral"
