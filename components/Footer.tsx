@@ -29,7 +29,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-gray-800 text-center">
-          <p className="text-gray-300">© {new Date().getFullYear()} Your Name. All rights reserved.</p>
+          <p className="text-gray-300">© {new Date().getFullYear()} IELON. All rights reserved.</p>
         </div>
       </div>
     </footer>
