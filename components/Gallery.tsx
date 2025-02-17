@@ -34,6 +34,10 @@ const galleryItems = [
     id: 7,
     image: '/assets/g7.webp',
   },
+  {
+    id: 8,
+    image: '/assets/g8.png',
+  },
 ];
 
 const Gallery = () => {

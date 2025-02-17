@@ -68,15 +68,15 @@ const Header: React.FC = () => {
           </motion.a>
         </div>
         <div className="flex items-center space-x-4">
-          <a href="https://twitter.com/yourproject" target="_blank" rel="noopener noreferrer"
+          <a href="/" target="_blank" rel="noopener noreferrer"
             className="text-white hover:text-primary-500 transition-colors">
             <RiTwitterXFill size={24} />
           </a>
-          <a href="https://t.me/yourproject" target="_blank" rel="noopener noreferrer"
+          <a href="/" target="_blank" rel="noopener noreferrer"
             className="text-white hover:text-primary-500 transition-colors">
             <FaTelegram size={24} />
           </a>
-          <a href="https://facebook.com/yourproject" target="_blank" rel="noopener noreferrer"
+          <a href="/" target="_blank" rel="noopener noreferrer"
             className="text-white hover:text-primary-500 transition-colors">
             <FaFacebook size={24} />
           </a>
