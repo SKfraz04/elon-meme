@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { motion } from "framer-motion";
-import {  Righteous } from "next/font/google";
+import { Righteous } from "next/font/google";
 import { FaTwitter, FaTelegram, FaFacebook } from 'react-icons/fa';
 import { RiTwitterXFill } from "react-icons/ri";
 
@@ -28,7 +28,7 @@ const Header: React.FC = () => {
   };
 
   return (
-    <motion.nav 
+    <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={`${righteous.className} fixed w-full top-0 z-50 bg-black/50 backdrop-blur-md`}
@@ -38,7 +38,7 @@ const Header: React.FC = () => {
           whileHover={{ scale: 1.05 }}
           className="text-2xl font-bold gradient-text font-magistral"
         >
-         IELON
+          IELON
         </motion.div>
         <div className="hidden md:flex space-x-8">
           {[
@@ -57,17 +57,26 @@ const Header: React.FC = () => {
               {item.name}
             </motion.a>
           ))}
+          <motion.a
+            whileHover={{ y: -2 }}
+            className="text-gray-300 hover:gradient-text transition-colors font-magistral"
+            href="/assets/IELON-WHITEPAPER.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Whitepaper
+          </motion.a>
         </div>
         <div className="flex items-center space-x-4">
-          <a href="https://twitter.com/yourproject" target="_blank" rel="noopener noreferrer" 
+          <a href="https://twitter.com/yourproject" target="_blank" rel="noopener noreferrer"
             className="text-white hover:text-primary-500 transition-colors">
             <RiTwitterXFill size={24} />
           </a>
-          <a href="https://t.me/yourproject" target="_blank" rel="noopener noreferrer" 
+          <a href="https://t.me/yourproject" target="_blank" rel="noopener noreferrer"
             className="text-white hover:text-primary-500 transition-colors">
             <FaTelegram size={24} />
           </a>
-          <a href="https://facebook.com/yourproject" target="_blank" rel="noopener noreferrer" 
+          <a href="https://facebook.com/yourproject" target="_blank" rel="noopener noreferrer"
             className="text-white hover:text-primary-500 transition-colors">
             <FaFacebook size={24} />
           </a>
