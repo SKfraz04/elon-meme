@@ -135,7 +135,7 @@ const TokenAllocation: React.FC = () => {
         </div>
         
         <div className="chart-section">
-          <div className="chart-container">
+          <div style={{ border:'none', backgroundColor:'transparent' }} className="chart-container">
             <Pie 
               data={tokenData} 
               options={options}

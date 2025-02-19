@@ -31,15 +31,15 @@ const Header: React.FC = () => {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className={`${righteous.className} fixed w-full top-0 z-50 bg-black/50 backdrop-blur-md`}
+      className={`${righteous.className} fixed w-full top-0 z-50 mt-5`}
     >
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <motion.div
+      <div className="container mx-auto px-4 py-4 flex justify-center items-center bg-black/50 backdrop-blur-md rounded-[50px] max-w-[600px]">
+        {/* <motion.div
           whileHover={{ scale: 1.05 }}
           className="text-2xl font-bold gradient-text font-magistral"
         >
           IELON
-        </motion.div>
+        </motion.div> */}
         <div className="hidden md:flex space-x-8">
           {[
             { name: "About", href: "#about" },
@@ -67,7 +67,7 @@ const Header: React.FC = () => {
             Whitepaper
           </motion.a>
         </div>
-        <div className="flex items-center space-x-4">
+        {/* <div className="flex items-center space-x-4">
           <a href="/" target="_blank" rel="noopener noreferrer"
             className="text-white hover:text-primary-500 transition-colors">
             <RiTwitterXFill size={24} />
@@ -80,7 +80,7 @@ const Header: React.FC = () => {
             className="text-white hover:text-primary-500 transition-colors">
             <FaFacebook size={24} />
           </a>
-        </div>
+        </div> */}
       </div>
     </motion.nav>
   );

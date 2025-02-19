@@ -45,18 +45,10 @@ body {
   animation: blob 7s infinite;
 }
 
-.hero-gradient {
-  background: linear-gradient(
-    to bottom right,
-    rgba(93, 63, 211, 0.2),
-    rgba(137, 58, 234, 0.1)
-  );
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: -1;
+.hero-section {
+  background: url('/assets/hero_bg.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
 
 .purple-blur {

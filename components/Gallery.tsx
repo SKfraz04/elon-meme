@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import { Autoplay } from 'swiper/modules';
 import Image from 'next/image';
 import 'swiper/css/bundle';
 
@@ -49,17 +49,15 @@ const Gallery = () => {
         </h2>
         
         <Swiper
-          modules={[Navigation, Pagination, Autoplay]}
+          modules={[Autoplay]}
           spaceBetween={20}
           slidesPerView={1}
-          navigation
-          pagination={{ clickable: true }}
           autoplay={{ 
-            delay: 3000,
+            delay: 0,
             disableOnInteraction: false,
             pauseOnMouseEnter: true
           }}
-          speed={1500}
+          speed={3000}
           loop={true}
           breakpoints={{
             640: {
@@ -73,13 +71,13 @@ const Gallery = () => {
         >
           {galleryItems.map((item) => (
             <SwiperSlide key={item.id}>
-              <div className="relative h-80 group">
+              <div className="relative h-96 group">
                 <Image
                   src={item.image}
                   alt={`Gallery image ${item.id}`}
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className="object-cover rounded-2xl border-2 border-purple-500/30 shadow-xl shadow-purple-500/20 
+                  className="object-cover rounded-3xl border-2 border-purple-500/30 shadow-xl shadow-purple-500/20 
                     transition-all duration-300 group-hover:scale-105 group-hover:border-purple-500/50"
                   priority
                 />
