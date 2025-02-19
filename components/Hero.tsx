@@ -19,26 +19,25 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <div className="hero-section  min-h-screen flex items-center justify-center overflow-hidden py-24">
+    <div className="flex overflow-hidden justify-center items-center py-24 min-h-screen hero-section">
       {/* Background elements */}
       <div className="" />
       <div className="purple-blur purple-blur-1" />
       <div className="purple-blur purple-blur-2" />
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full items-center">
+      <div className="container relative z-10 px-4 mx-auto sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 gap-8 items-center w-full md:grid-cols-2">
           {/* Left Content Side */}
-          <div className="order-2 md:order-1 flex flex-col items-center md:items-start text-center md:text-left 
-                        space-y-6 md:space-y-8">
+          <div className="flex flex-col order-2 items-center space-y-6 text-center md:order-1 md:items-start md:text-left md:space-y-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="text-4xl md:text-6xl lg:text-6xl font-bold mb-4 mt-4 leading-tight">
-                <span className="text-base-content text-white">
+              <h1 className="mt-4 mb-4 text-4xl font-bold leading-tight md:text-6xl lg:text-6xl">
+                <span className="text-white text-base-content">
                   OFFICIAL
                 </span>{" "}
-                <span className="text-base-content gradient-text relative">
+                <span className="relative text-base-content gradient-text">
                   IELON
                 </span>
               </h1>
@@ -48,7 +47,7 @@ const Hero: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-lg md:text-xl leading-relaxed text-base-content/80 max-w-xl"
+              className="max-w-2xl text-lg leading-relaxed md:text-xl text-base-content/80"
             >
               Welcome to IELON – Innovating cryptocurrency management with enterprise-grade security, intuitive controls, and a focus on recovering misused public funds.
             </motion.p>
@@ -58,9 +57,9 @@ const Hero: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="flex flex-col sm:flex-row gap-4 w-full max-w-md"
+              className="flex flex-col gap-4 w-full max-w-md sm:flex-row"
             >
-              <button className="gradient-button px-10 py-3 bg-yellow-500 text-black rounded-full font-bold hover:bg-yellow-400 transition-colors">
+              <button className="px-10 py-3 font-bold text-black bg-yellow-500 rounded-full transition-colors gradient-button hover:bg-yellow-400">
                 <span className="relative z-10">Buy Now</span>
               </button>
             </motion.div>
@@ -70,12 +69,12 @@ const Hero: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
-              className="w-full max-w-md bg-base-200/50 backdrop-blur-sm rounded-xl p-4 border border-white/10"
+              className="p-4 w-full max-w-md rounded-xl border backdrop-blur-sm bg-base-200/50 border-white/10"
             >
-              <div className="flex items-center justify-between">
+              <div className="flex justify-between items-center">
                 <div>
-                  <p className="text-sm text-base-content/60 mb-1">Contract Address (Solana)</p>
-                  <p className="text-sm font-mono text-base-content/80">
+                  <p className="mb-1 text-sm text-base-content/60">Contract Address (Solana)</p>
+                  <p className="font-mono text-sm text-base-content/80">
                     ABC123...XYZ789
                   </p>
                 </div>
@@ -84,11 +83,11 @@ const Hero: React.FC = () => {
                     handleCopy();
                     // You might want to add a toast notification here
                   }}
-                  className="p-2 hover:bg-base-300 rounded-lg transition-colors duration-200"
+                  className="p-2 rounded-lg transition-colors duration-200 hover:bg-base-300"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5 text-base-content/60 hover:text-base-content"
+                    className="w-5 h-5 text-base-content/60 hover:text-base-content"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"

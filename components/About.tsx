@@ -7,22 +7,22 @@ const About = () => {
     {
       title: "Mission Recovery",
       description: "Using cutting-edge meme technology to track and recover misused government funds.",
-      icon: "🔍"
+      icon: <Image src="/assets/MissionRecovery.svg" alt="Mission" width={81} height={81} />
     },
     {
       title: "Laser Focus",
       description: "Employing laser-eyed determination to investigate and optimize government spending.",
-      icon: "👀"
+      icon: <Image src="/assets/LoserFocus.svg" alt="Mission" width={81} height={81} />
     },
     {
       title: "Meme Power",
       description: "Harnessing the power of viral memes to bring transparency to public finances.",
-      icon: "🚀"
+      icon: <Image src="/assets/MemePower.svg" alt="Mission" width={81} height={81} />
     },
     {
       title: "Crypto Sleuths",
       description: "Utilizing blockchain and AI to expose inefficiencies and hold agencies accountable.",
-      icon: "💰"
+      icon: <Image src="/assets/CryptoSleuths.svg" alt="Mission" width={81} height={81} />
     }
   ];
 
@@ -35,53 +35,24 @@ const About = () => {
           transition={{ duration: 0.8 }}
           className={styles.headerContainer}
         >
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className={`${styles.title} `}
+            className={`${styles.gradientText} uppercase font-['Bruno_Ace_SC']`}
           >
-            Inspector Elon (IELON) – The Government's Only Hope!
+            Inspector Elon (IELON)
           </motion.h1>
-          
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className={styles.subheading}
+            className={`${styles.subheading} uppercase font-['Bruno_Ace_SC']`}
           >
-            The Mission: Recovering US Government Funds, One Meme at a Time!
-          </motion.p>
-          
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            className={styles.description}
-          >
-            In a world full of wasted budgets, endless investigations, and questionable spending, 
-            only one hero can bring order to the chaos… Inspector Elon! With his laser-eyed determination, 
-            flame-throwing tweets, and meme-powered detective skills, he's here to sniff out inefficiency 
-            and recover lost taxpayer dollars like a true government watchdog.
+            The Government's Only Hope!
           </motion.p>
         </motion.div>
-        
         <div className={styles.content}>
-          <motion.div 
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className={styles.imageContainer}
-            whileHover={{ scale: 1.05 }}
-          >
-            <Image
-              src="/assets/founder.jpeg"
-              alt="Inspector Elon"
-              width={400}
-              height={400}
-              className={styles.image}
-            />
-          </motion.div>
           <div className={styles.cardsContainer}>
             {cards.map((card, index) => (
               <motion.div
@@ -90,7 +61,7 @@ const About = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.8 + index * 0.2 }}
                 className={styles.card}
-                whileHover={{ 
+                whileHover={{
                   scale: 1.05,
                   boxShadow: "0 10px 20px rgba(0,0,0,0.2)"
                 }}
@@ -101,6 +72,20 @@ const About = () => {
               </motion.div>
             ))}
           </div>
+          <motion.div 
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className={styles.imageContainer}
+          >
+            <Image
+              src="/assets/aboutelon.png"
+              alt="Inspector Elon"
+              width={323}
+              height={612}
+              className={styles.image}
+            />
+          </motion.div>
         </div>
       </div>
     </section>
