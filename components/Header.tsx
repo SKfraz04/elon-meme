@@ -39,7 +39,7 @@ const Header: React.FC = () => {
           className="flex items-center ms-5"
           style={{ position: 'absolute'}}
         >
-         <Image src={IelonLogo} alt="IELON" width="auto" height={40} />
+         <Image src={IelonLogo} alt="IELON" width={130} height={40} className='mt-3' />
         </motion.div>
       <div className="container mx-auto px-4 py-4 flex justify-center items-center bg-black/50 backdrop-blur-md rounded-[50px] max-w-[600px]">
         <div className="hidden space-x-8 md:flex">
