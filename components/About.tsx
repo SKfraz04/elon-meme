@@ -62,7 +62,7 @@ const About = () => {
                 transition={{ duration: 0.6, delay: 0.8 + index * 0.2 }}
                 className={styles.card}
                 whileHover={{
-                  scale: 1.05,
+                  // scale: 1.05,
                   boxShadow: "0 10px 20px rgba(0,0,0,0.2)"
                 }}
               >

@@ -6,6 +6,7 @@
   background-repeat: no-repeat;
   /* background: linear-gradient(to bottom, #1a1a1a, #2d2d2d); */
   color: white;
+  height: 100vh;
 }
 
 .container {
@@ -31,8 +32,8 @@
 }
 
 .imageContainer {
-position: absolute;
-right: 0%;
+  position: absolute;
+  right: 0%;
 }
 
 .image {
@@ -44,22 +45,28 @@ right: 0%;
 } */
 
 .cardsContainer {
-  flex: 1;
+  /* flex: 1;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  min-width: 300px;
+  gap: 1.5rem;
+  min-width: 300px; */
+  /* flex: 1; */
+  display: flex;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  width: 95% !important;
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.1);
+  background: #121212;
   border-radius: 15px;
-  padding: 2rem;
-  transition: all 0.3s ease;
+  padding: 2rem 1rem;
+  transition: all 0.3sease;
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   cursor: pointer;
   height: 323px;
+  width: 85%;
 }
 
 .card:hover {
@@ -70,21 +77,22 @@ right: 0%;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 25px;
 }
 
 .cardTitle {
   font-size: 1.5rem;
   margin: 1rem 0;
-text-align: center;
+  text-align: center;
 }
 
 .cardDescription {
   color: #cccccc;
-font-weight: 400;
-font-size: 11.9px;
-line-height: 16.21px;
-letter-spacing: 0%;
-text-align: center;
+  font-weight: 400;
+  font-size: 11.9px;
+  line-height: 16.21px;
+  letter-spacing: 0%;
+  text-align: center;
 
 }
 
