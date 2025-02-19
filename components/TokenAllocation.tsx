@@ -21,23 +21,28 @@ const tokenData = {
   datasets: [
     {
       data: [15, 25, 30, 20, 10],
+      discription: ["Reserved for team members and advisors with a vesting period to ensure long-term commitment.",
+        "Reserved for team members and advisors with a vesting period to ensure long-term commitment.",
+        "Dedicated to community rewards, marketing initiatives, and ecosystem growth.",
+        "Supports ongoing platform development, upgrades, and technical improvements.",
+        "Allocated to early supporters and strategic partners."],
       backgroundColor: [
-        'rgba(255, 99, 232, 0.85)',
-        'rgba(54, 162, 255, 0.85)',
-        'rgba(255, 206, 86, 0.85)',
-        'rgba(75, 222, 192, 0.85)',
-        'rgba(153, 102, 255, 0.85)',
+        '#3B82F6', // Team & Advisors - blue
+        '#4FD1C5', // Community & Marketing - teal
+        '#9F7AEA', // Liquidity Pool - purple
+        '#F472B6', // Development Fund - pink
+        '#2563EB', // Private Sale - darker blue
       ],
       borderColor: [
-        'rgba(255, 99, 232, 1)',
-        'rgba(54, 162, 255, 1)',
-        'rgba(255, 206, 86, 1)',
-        'rgba(75, 222, 192, 1)',
-        'rgba(153, 102, 255, 1)',
+        '#3B82F6',
+        '#4FD1C5',
+        '#9F7AEA',
+        '#F472B6',
+        '#2563EB',
       ],
-      borderWidth: 2,
-      offset: 25,
-      hoverOffset: 35,
+      borderWidth: 1,
+      offset: 10,
+      hoverOffset: 15,
     },
   ],
 };
@@ -52,7 +57,7 @@ const TokenAllocation: React.FC = () => {
         labels: {
           font: {
             size: 16,
-            family: "'Inter', sans-serif",
+            fontFamily: "Bruno Ace SC', serif",
             weight: 600,
           },
           color: '#ffffff',
@@ -98,44 +103,28 @@ const TokenAllocation: React.FC = () => {
 
   return (
     <div className="token-allocation" id="token-allocation">
-      <div className="token-allocation-container">
-        <div className="content-section">
-          <h2 className={`title gradient-text`}>Token Allocation</h2>
-          <p className="description">
-            Our token distribution is carefully designed to ensure long-term sustainability 
-            and fair distribution across different stakeholders.
-          </p>
-          
-          <div className="allocation-details">
-            <div className="allocation-item">
-              <h3>Team & Advisors (15%)</h3>
-              <p>Reserved for team members and advisors with a vesting period to ensure long-term commitment.</p>
+    <div className="token-allocation-container">
+      <h2 className="uppercase title GradientText">TOKEN ALLOCATION</h2>
+      <p className="description font-['Bruno_Ace_SC']">
+        OUR TOKEN DISTRIBUTION IS CAREFULLY DESIGNED TO ENSURE LONG-TERM 
+        SUSTAINABILITY AND FAIR DISTRIBUTION ACROSS DIFFERENT STAKEHOLDERS.
+      </p>
+      
+      <div className="content-wrapper">
+        <div className="timeline-section">
+          {tokenData.labels.map((label, index) => (
+            <div key={index} className="timeline-item">
+              <div className="timeline-dot"></div>
+              <div className="timeline-content">
+                <h3 className='uppercase GradientText'>{label}</h3>
+                <p>{tokenData.datasets[0].discription[index]}</p>
+              </div>
             </div>
-            
-            <div className="allocation-item">
-              <h3>Community & Marketing (25%)</h3>
-              <p>Dedicated to community rewards, marketing initiatives, and ecosystem growth.</p>
-            </div>
-            
-            <div className="allocation-item">
-              <h3>Liquidity Pool (30%)</h3>
-              <p>Ensures stable trading and price discovery on decentralized exchanges.</p>
-            </div>
-            
-            <div className="allocation-item">
-              <h3>Development Fund (20%)</h3>
-              <p>Supports ongoing platform development, upgrades, and technical improvements.</p>
-            </div>
-            
-            <div className="allocation-item">
-              <h3>Private Sale (10%)</h3>
-              <p>Allocated to early supporters and strategic partners.</p>
-            </div>
-          </div>
+          ))}
         </div>
         
         <div className="chart-section">
-          <div style={{ border:'none', backgroundColor:'transparent' }} className="chart-container">
+          <div className="chart-container">
             <Pie 
               data={tokenData} 
               options={options}
@@ -143,139 +132,140 @@ const TokenAllocation: React.FC = () => {
           </div>
         </div>
       </div>
-      
-      <style jsx>{`
-        .token-allocation {
-          padding: 3rem;
-          background: linear-gradient(145deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9));
-          border-radius: 1.5rem;
-          margin: 3rem auto;
-          max-width: 1400px;
-          box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
-          border: 1px solid rgba(255, 255, 255, 0.15);
-        }
-        
-        .token-allocation-container {
-          display: flex;
-          gap: 3rem;
-          align-items: center;
-        }
-        
-        .content-section {
-          flex: 1.2;
-          padding-right: 3rem;
-        }
-        
-        .chart-section {
-          flex: 1;
-          min-height: 600px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          position: relative;
-        }
-        
-        .chart-container {
-          height: 550px;
-          width: 100%;
-          position: relative;
-          padding: 1.5rem;
-          background: rgba(255, 255, 255, 0.05);
-          border-radius: 2rem;
-          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-          border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        @keyframes float {
-          0% { transform: translateY(0px); }
-          50% { transform: translateY(-10px); }
-          100% { transform: translateY(0px); }
-        }
-
-        .chart-section {
-          animation: float 6s ease-in-out infinite;
-          align-self: stretch;
-          display: flex;
-          align-items: center;
-        }
-        
-        h2 {
-          color: #ffffff;
-          margin-bottom: 1rem;
-          font-size: 2rem;
-          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        }
-        
-        .description {
-          color: #ffffff;
-          font-size: 1.1rem;
-          margin-bottom: 2rem;
-          opacity: 0.9;
-          line-height: 1.6;
-        }
-        
-        .allocation-details {
-          display: flex;
-          flex-direction: column;
-          gap: 1.5rem;
-        }
-        
-        .allocation-item {
-          background: rgba(255, 255, 255, 0.05);
-          padding: 1rem;
-          border-radius: 0.5rem;
-          border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .allocation-item h3 {
-          color: #ffffff;
-          font-size: 1.1rem;
-          margin-bottom: 0.5rem;
-        }
-        
-        .allocation-item p {
-          color: #ffffff;
-          opacity: 0.8;
-          font-size: 0.9rem;
-          line-height: 1.5;
-        }
-
-        @media (max-width: 1024px) {
-          .token-allocation-container {
-            flex-direction: column;
-            align-items: stretch;
-          }
-          
-          .content-section {
-            padding-right: 0;
-          }
-          
-          .chart-section {
-            min-height: 500px;
-            margin: 2rem 0;
-          }
-          
-          .chart-container {
-            height: 450px;
-          }
-        }
-
-        @media (max-width: 768px) {
-          .token-allocation {
-            padding: 1rem;
-          }
-          
-          h2 {
-            font-size: 1.75rem;
-          }
-          
-          .description {
-            font-size: 1rem;
-          }
-        }
-      `}</style>
     </div>
-  );
+      
+    <style jsx>{`
+      .token-allocation {
+        padding: 4rem 2rem;
+        background-color: #000000;
+        color: #ffffff;
+      }
+
+      .token-allocation-container {
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+
+      .title {
+        text-align: center;
+        font-size: 42px;
+        color: #8B5CF6;
+        font-family: 'Bruno Ace SC', serif;
+        margin-bottom: 1rem;
+        letter-spacing: 0.1em;
+      }
+
+      .description {
+        text-align: center;
+        color: #ffffff;
+        max-width: 800px;
+        margin: 0 auto 4rem;
+        line-height: 1.6;
+        font-size: 14px;
+        letter-spacing: 0.05em;
+      }
+
+      .content-wrapper {
+        display: flex;
+        gap: 4rem;
+        align-items: center;
+      }
+
+      .timeline-section {
+        flex: 1;
+        position: relative;
+      }
+
+      .timeline-section::before {
+        content: '';
+        position: absolute;
+        left: 7px;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: rgba(139, 92, 246, 0.3);
+      }
+
+      .timeline-item {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 2.5rem;
+        position: relative;
+      }
+
+      .timeline-dot {
+        width: 16px;
+        height: 16px;
+        background: #8B5CF6;
+        border-radius: 50%;
+        margin-right: 2rem;
+        flex-shrink: 0;
+      }
+
+      .timeline-content {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 12px;
+        padding: 9px;
+        flex-grow: 1;
+        line-height: 30px;
+      }
+
+      .timeline-content h3 {
+        text-align: left;
+        font-size: 1.1rem;
+        font-weight: 600;
+      }
+
+      .timeline-content p {
+        color: #94A3B8;
+        font-size: 0.9rem;
+      }
+
+      .chart-section {
+        flex: 1;
+        min-height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .chart-container {
+        width: 100%;
+        height: 500px;
+        position: relative;
+      }
+
+      @media (max-width: 1024px) {
+        .content-wrapper {
+          flex-direction: column;
+        }
+
+        .timeline-section {
+          width: 100%;
+        }
+
+        .chart-section {
+          width: 100%;
+          min-height: 400px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .token-allocation {
+          padding: 2rem 1rem;
+        }
+
+        .title {
+          font-size: 2rem;
+        }
+
+        .description {
+          font-size: 1rem;
+          margin-bottom: 2rem;
+        }
+      }
+    `}</style>
+  </div>  );
 };
 
 export default TokenAllocation; 

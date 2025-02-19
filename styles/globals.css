@@ -90,6 +90,9 @@ body {
   letter-spacing: 0%;
   text-align: center;
 }
+.CommonText {
+  font-family: 'Bruno Ace SC', serif;
+}
 #tsparticles {
   position: absolute;
   width: 100%;
