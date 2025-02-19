@@ -14,6 +14,7 @@ import { Toaster } from 'react-hot-toast';
 import Gallery from '../components/Gallery';
 import Partners from '@/components/Partners';
 import CoinDetails from '@/components/CoinDetails';
+import Mission from '../components/Mission';
 
 const geistSansFont = GeistSans.className
 const geistMonoFont = GeistMono.className
@@ -31,6 +32,7 @@ const Home: NextPage = () => {
         <Header />
         <Hero />
         <About />
+        <Mission />
         <Gallery />
         <TokenAllocation />
         {/* <TokenUtility /> */}

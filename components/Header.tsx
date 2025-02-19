@@ -3,7 +3,8 @@ import { motion } from "framer-motion";
 import { Righteous } from "next/font/google";
 import { FaTwitter, FaTelegram, FaFacebook } from 'react-icons/fa';
 import { RiTwitterXFill } from "react-icons/ri";
-
+import Image from 'next/image';
+import IelonLogo from '../public/assets/logo.svg';
 const righteous = Righteous({
   weight: '400',
   subsets: ['latin'],
@@ -33,14 +34,15 @@ const Header: React.FC = () => {
       animate={{ y: 0 }}
       className={`${righteous.className} fixed w-full top-0 z-50 mt-5`}
     >
-      <div className="container mx-auto px-4 py-4 flex justify-center items-center bg-black/50 backdrop-blur-md rounded-[50px] max-w-[600px]">
-        {/* <motion.div
-          whileHover={{ scale: 1.05 }}
-          className="text-2xl font-bold gradient-text font-magistral"
+      <div className="flex">
+        <motion.div
+          className="flex items-center ms-5"
+          style={{ position: 'absolute'}}
         >
-          IELON
-        </motion.div> */}
-        <div className="hidden md:flex space-x-8">
+         <Image src={IelonLogo} alt="IELON" width="auto" height={40} />
+        </motion.div>
+      <div className="container mx-auto px-4 py-4 flex justify-center items-center bg-black/50 backdrop-blur-md rounded-[50px] max-w-[600px]">
+        <div className="hidden space-x-8 md:flex">
           {[
             { name: "About", href: "#about" },
             { name: "Tokenomic", href: "#token-allocation" },
@@ -50,7 +52,7 @@ const Header: React.FC = () => {
             <motion.a
               key={item.name}
               whileHover={{ y: -2 }}
-              className="text-gray-300 hover:gradient-text transition-colors font-magistral"
+              className="text-gray-300 transition-colors hover:gradient-text font-magistral"
               href={item.href}
               onClick={(e) => scrollToSection(e, item.href)}
             >
@@ -59,7 +61,7 @@ const Header: React.FC = () => {
           ))}
           <motion.a
             whileHover={{ y: -2 }}
-            className="text-gray-300 hover:gradient-text transition-colors font-magistral"
+            className="text-gray-300 transition-colors hover:gradient-text font-magistral"
             href="/assets/IELON-WHITEPAPER.pdf"
             target="_blank"
             rel="noopener noreferrer"
@@ -67,17 +69,18 @@ const Header: React.FC = () => {
             Whitepaper
           </motion.a>
         </div>
+        </div>
         {/* <div className="flex items-center space-x-4">
           <a href="/" target="_blank" rel="noopener noreferrer"
-            className="text-white hover:text-primary-500 transition-colors">
+            className="text-white transition-colors hover:text-primary-500">
             <RiTwitterXFill size={24} />
           </a>
           <a href="/" target="_blank" rel="noopener noreferrer"
-            className="text-white hover:text-primary-500 transition-colors">
+            className="text-white transition-colors hover:text-primary-500">
             <FaTelegram size={24} />
           </a>
           <a href="/" target="_blank" rel="noopener noreferrer"
-            className="text-white hover:text-primary-500 transition-colors">
+            className="text-white transition-colors hover:text-primary-500">
             <FaFacebook size={24} />
           </a>
         </div> */}
