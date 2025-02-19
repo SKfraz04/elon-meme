@@ -71,14 +71,25 @@ body {
   left: -100px;
 }
 
-.purple-blur-2 {
+/* .purple-blur-2 {
   background: rgba(93, 63, 211, 0.4);
   width: 400px;
   height: 400px;
   bottom: -150px;
   right: -100px;
+} */
+.GradientText {
+  background: linear-gradient(91.66deg, #9747FF 31.42%, #4F99FF 75.21%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: 'Bruno Ace SC', serif;
+  font-weight: 400;
+  font-size: 44px;
+  line-height: 53.06px;
+  letter-spacing: 0%;
+  text-align: center;
 }
-
 #tsparticles {
   position: absolute;
   width: 100%;
