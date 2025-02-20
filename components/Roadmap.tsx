@@ -75,7 +75,7 @@ const Roadmap: React.FC = () => {
       <div className="roadmap-container">
         <h2 className={`title GradientText`}>Roadmap</h2>
         <p className="description CommonText">
-          Our strategic roadmap outlines the key milestones and development phases 
+          Our strategic roadmap outlines the key milestones and development phases
           that will drive our project's growth and success.
         </p>
 

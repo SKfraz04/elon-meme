@@ -6,22 +6,24 @@
   font-family: "Bruno Ace SC";
   src: url("../components/Fonts/Bruno_Ace_SC/BrunoAceSC-Regular.ttf");
 }
-
+@font-face {
+  font-family: "Poppins";
+  src: url("../components/Fonts/Poppins/Poppins-Regular.ttf");
+}
 :root {
   --foreground-rgb: 255, 255, 255;
   --background-start-rgb: 0, 0, 0;
   --background-end-rgb: 0, 0, 0;
-  --primary-gradient: linear-gradient(90deg,#c766ef,#7928d2 51.04%,#2b0c52);
-  --primary-gradient-light: linear-gradient(90deg,rgba(199, 102, 239, 0.1),rgba(121, 40, 210, 0.1) 51.04%,rgba(43, 12, 82, 0.1));
+  --primary-gradient: linear-gradient(90deg, #c766ef, #7928d2 51.04%, #2b0c52);
+  --primary-gradient-light: linear-gradient(90deg, rgba(199, 102, 239, 0.1), rgba(121, 40, 210, 0.1) 51.04%, rgba(43, 12, 82, 0.1));
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-    to bottom,
-    rgb(var(--background-start-rgb)),
-    rgb(var(--background-end-rgb))
-  );
+  background: linear-gradient(to bottom,
+      rgb(var(--background-start-rgb)),
+      rgb(var(--background-end-rgb)));
+  font-family: "Poppins", sans-serif;
 }
 
 @layer utilities {
@@ -35,12 +37,15 @@ body {
   0% {
     transform: translate(0px, 0px) scale(1);
   }
+
   33% {
     transform: translate(30px, -50px) scale(1.1);
   }
+
   66% {
     transform: translate(-20px, 20px) scale(0.9);
   }
+
   100% {
     transform: translate(0px, 0px) scale(1);
   }
@@ -90,9 +95,11 @@ body {
   letter-spacing: 0%;
   text-align: center;
 }
+
 .CommonText {
   font-family: 'Bruno Ace SC', serif;
 }
+
 #tsparticles {
   position: absolute;
   width: 100%;
@@ -104,9 +111,11 @@ body {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -120,6 +129,7 @@ body {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }
@@ -155,7 +165,8 @@ body {
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 80px; /* Adjust this value based on your header height */
+  scroll-padding-top: 80px;
+  /* Adjust this value based on your header height */
 }
 
 .gallery-swiper .swiper-button-next,
@@ -169,4 +180,20 @@ html {
 
 .gallery-swiper .swiper-pagination-bullet-active {
   background: #3b82f6;
+}
+
+.PartnerTitle {
+  position: relative;
+  top: 250px;
+}
+
+@media (max-width: 768px) {
+  .PartnerTitle {
+    position: static;
+    top: 0;
+  }
+
+  .PartnerImage {
+    display: none;
+  }
 }
