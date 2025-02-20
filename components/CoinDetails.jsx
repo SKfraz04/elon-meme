@@ -3,14 +3,14 @@ import { FiCopy } from 'react-icons/fi';
 import { useState } from 'react';
 import toast from 'react-hot-toast';
 import Image from 'next/image';
+import { ContractAdr } from './Common/Common';
 
 const CoinDetails = () => {
   const [copied, setCopied] = useState(false);
-  const contractAddress = "123ABC...789XYZ";
 
-  const copyToClipboard = () => {
-    navigator.clipboard.writeText(contractAddress);
-    toast.success('Copied to clipboard');
+  const handleCopy = (ContractAdr) => {
+    toast.success('Copied...');
+    navigator.clipboard.writeText(ContractAdr);
   };
 
   return (
@@ -73,16 +73,19 @@ const CoinDetails = () => {
         </motion.div>
 
         {/* Contract Address */}
-        {/* <motion.div
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           className="mt-12 text-center"
+           id="contract"
         >
-          <h3 className="mb-2 text-gray-400">Solana Contract Address</h3>
+          <h3 className="mb-5 GradientText">Solana Contract Address</h3>
           <div className="inline-flex items-center px-8 py-2 rounded-lg bg-gray-800/50">
-            <span className="mr-2 text-white">{contractAddress}</span>
+            <span className="mr-2 text-white">{ContractAdr.slice(0, 5)}...{ContractAdr.slice(-5)}</span>
             <button
-              onClick={copyToClipboard}
+              onClick={() => {
+                handleCopy(ContractAdr);
+              }}
               className="text-gray-400 transition-colors hover:text-white"
             >
               <FiCopy size={20} />
@@ -97,7 +100,18 @@ const CoinDetails = () => {
               Copied to clipboard!
             </motion.p>
           )}
-        </motion.div> */}
+        </motion.div>
+      </div>
+      <div className='flex justify-end items-center'>
+        <img 
+          src='/assets/Blueshadow.png' 
+          alt='tokenomics' 
+          className='h-full w-50' 
+          style={{
+            position: 'absolute',
+            transform: 'rotate(180deg)'
+          }} 
+        />
       </div>
     </section>
   );
