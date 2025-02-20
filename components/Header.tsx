@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { motion } from "framer-motion";
 import { Righteous } from "next/font/google";
 import { FaTwitter, FaTelegram, FaFacebook } from 'react-icons/fa';
@@ -11,6 +11,8 @@ const righteous = Righteous({
 })
 
 const Header: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     setTimeout(() => {
@@ -39,51 +41,89 @@ const Header: React.FC = () => {
           className="flex items-center ms-5"
           style={{ position: 'absolute'}}
         >
-         <Image src={IelonLogo} alt="IELON" width={130} height={40} className='mt-3' />
+          <Image src={IelonLogo} alt="IELON" width={130} height={40} className='mt-4' />
         </motion.div>
-      <div className="container mx-auto px-4 py-4 flex justify-center items-center bg-black/50 backdrop-blur-md rounded-[50px] max-w-[600px]">
-        <div className="hidden space-x-8 md:flex">
-          {[
-            { name: "About", href: "#about" },
-            { name: "Tokenomic", href: "#token-allocation" },
-            { name: "TokenUtility", href: "#token-utility" },
-            { name: "Faqs", href: "#faqs" },
-          ].map((item) => (
+        
+        {/* Mobile menu button */}
+        <button
+          className="absolute top-6 right-6 z-50 text-white md:hidden"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          <svg className="w-6 h-6" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+            {isMenuOpen ? (
+              <path d="M6 18L18 6M6 6l12 12" />
+            ) : (
+              <path d="M4 6h16M4 12h16M4 18h16" />
+            )}
+          </svg>
+        </button>
+
+        {/* Desktop menu */}
+        <div className="hidden md:block container mx-auto px-4 py-4 flex justify-center items-center bg-black/50 backdrop-blur-md rounded-[50px] max-w-[600px]">
+          <div className="flex space-x-8">
+            {[
+              { name: "About", href: "#about" },
+              { name: "Tokenomic", href: "#token-allocation" },
+              { name: "TokenUtility", href: "#token-utility" },
+              { name: "Faqs", href: "#faqs" },
+            ].map((item) => (
+              <motion.a
+                key={item.name}
+                whileHover={{ y: -2 }}
+                className="text-gray-300 transition-colors hover:gradient-text font-magistral"
+                href={item.href}
+                onClick={(e) => scrollToSection(e, item.href)}
+              >
+                {item.name}
+              </motion.a>
+            ))}
             <motion.a
-              key={item.name}
               whileHover={{ y: -2 }}
               className="text-gray-300 transition-colors hover:gradient-text font-magistral"
-              href={item.href}
-              onClick={(e) => scrollToSection(e, item.href)}
+              href="/assets/IELON-WHITEPAPER.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              {item.name}
+              Whitepaper
             </motion.a>
-          ))}
-          <motion.a
-            whileHover={{ y: -2 }}
-            className="text-gray-300 transition-colors hover:gradient-text font-magistral"
-            href="/assets/IELON-WHITEPAPER.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Whitepaper
-          </motion.a>
+          </div>
         </div>
-        </div>
-        {/* <div className="flex items-center space-x-4">
-          <a href="/" target="_blank" rel="noopener noreferrer"
-            className="text-white transition-colors hover:text-primary-500">
-            <RiTwitterXFill size={24} />
-          </a>
-          <a href="/" target="_blank" rel="noopener noreferrer"
-            className="text-white transition-colors hover:text-primary-500">
-            <FaTelegram size={24} />
-          </a>
-          <a href="/" target="_blank" rel="noopener noreferrer"
-            className="text-white transition-colors hover:text-primary-500">
-            <FaFacebook size={24} />
-          </a>
-        </div> */}
+
+        {/* Mobile menu overlay */}
+        {isMenuOpen && (
+          <div className="fixed inset-0 z-40 backdrop-blur-md md:hidden bg-black/95">
+            <div className="flex flex-col justify-center items-center space-y-8 h-full">
+              {[
+                { name: "About", href: "#about" },
+                { name: "Tokenomic", href: "#token-allocation" },
+                { name: "TokenUtility", href: "#token-utility" },
+                { name: "Faqs", href: "#faqs" },
+              ].map((item) => (
+                <motion.a
+                  key={item.name}
+                  whileHover={{ y: -2 }}
+                  className="text-xl text-gray-300 transition-colors hover:gradient-text font-magistral"
+                  href={item.href}
+                  onClick={(e) => {
+                    scrollToSection(e, item.href);
+                    setIsMenuOpen(false);
+                  }}
+                >
+                  {item.name}
+                </motion.a>
+              ))}
+              <motion.a
+                whileHover={{ y: -2 }}
+                className="text-xl text-gray-300 transition-colors hover:gradient-text font-magistral"
+                href="/assets/IELON-WHITEPAPER.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Whitepaper
+              </motion.a>
+            </div>
+          </div>
+        )}
       </div>
     </motion.nav>
   );

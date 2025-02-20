@@ -2,6 +2,7 @@ import { useState } from 'react';
 import styles from '../styles/FAQ.module.css';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiPlus, FiMinus } from 'react-icons/fi';
+import Image from 'next/image';
 
 interface FAQItem {
     question: string;
@@ -32,10 +33,13 @@ const faqData: FAQItem[] = [
 ];
 
 const FAQ = () => {
-    const [activeIndex, setActiveIndex] = useState<number | null>(null);
+    const [activeIndex, setActiveIndex] = useState < number | null > (null);
 
     return (
         <section className={styles.faqSection} id="faqs">
+            <div className='relative'>
+                <Image src="/assets/FAQLogo.png" alt="FAQ Background" width={561} height={280} className='absolute right-0 bottom-0 me-7' />
+            </div>
             <div className={styles.container}>
                 <h2 className={styles.title}>Frequently Asked Questions</h2>
                 <div className={styles.faqContainer}>

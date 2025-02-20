@@ -5,6 +5,7 @@ import Particles from "react-particles";
 import { loadSlim } from "tsparticles-slim";
 import type { Engine } from "tsparticles-engine";
 import toast from 'react-hot-toast';
+import { ContractAdr } from './Common/Common';
 
 const Hero: React.FC = () => {
   // Initialize particles
@@ -13,9 +14,9 @@ const Hero: React.FC = () => {
   }, []);
   
 
-  const handleCopy = () => {
+  const handleCopy = (ContractAdr: string) => {
     toast.success('Copied...');
-    navigator.clipboard.writeText('ABC123XYZ789');
+    navigator.clipboard.writeText(ContractAdr);
   };
 
   return (
@@ -75,12 +76,12 @@ const Hero: React.FC = () => {
                 <div>
                   <p className="mb-1 text-sm text-base-content/60">Contract Address (Solana)</p>
                   <p className="font-mono text-sm text-base-content/80">
-                    ABC123...XYZ789
+                    {ContractAdr.slice(0, 5)}...{ContractAdr.slice(-5)}
                   </p>
                 </div>
                 <button
                   onClick={() => {
-                    handleCopy();
+                    handleCopy(ContractAdr);
                     // You might want to add a toast notification here
                   }}
                   className="p-2 rounded-lg transition-colors duration-200 hover:bg-base-300"

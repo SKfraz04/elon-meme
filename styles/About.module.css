@@ -12,7 +12,7 @@
 }
 
 .container {
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 auto;
   padding: 0 1rem;
 }
@@ -38,7 +38,7 @@
 .imageContainer {
   position: absolute;
   right: 0;
-  top: 50%;
+  top: 0;
   transform: translateY(-50%);
 }
 
@@ -51,8 +51,7 @@
 } */
 
 .cardsContainer {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  display: flex;
   gap: 1.5rem;
   width: 100%;
   max-width: 900px;
