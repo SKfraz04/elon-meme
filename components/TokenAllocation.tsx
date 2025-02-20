@@ -12,15 +12,16 @@ ChartJS.register(ArcElement, Tooltip, Legend, ChartDataLabels);
 
 const tokenData = {
   labels: [
-    'Team & Advisors (15%)',
-    'Community & Marketing (25%)',
-    'Liquidity Pool (30%)',
-    'Development Fund (20%)',
-    'Private Sale (10%)',
+    'Seed & Private VIP Sale',
+    'Public Community Sale',
+    'IDO',
+    'Marketing',
+    'Community & Rewards',
+    'Treasury',
   ],
   datasets: [
     {
-      data: [15, 25, 30, 20, 10],
+      data: [20, 15, 30, 10, 10, 15],
       discription: ["Reserved for team members and advisors with a vesting period to ensure long-term commitment.",
         "Reserved for team members and advisors with a vesting period to ensure long-term commitment.",
         "Dedicated to community rewards, marketing initiatives, and ecosystem growth.",
@@ -32,6 +33,7 @@ const tokenData = {
         '#9F7AEA', // Liquidity Pool - purple
         '#F472B6', // Development Fund - pink
         '#2563EB', // Private Sale - darker blue
+        '#9747ff63'
       ],
       borderColor: [
         '#3B82F6',
@@ -39,6 +41,7 @@ const tokenData = {
         '#9F7AEA',
         '#F472B6',
         '#2563EB',
+        '#9747ff63'
       ],
       borderWidth: 1,
       offset: 10,

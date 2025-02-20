@@ -200,12 +200,10 @@ html {
   }
 }
 ::selection {
-  color: white;
-  background: #9747FF;
+  color: white !important;
+  background: #9747ff63;
 }
-
-/* For Firefox */
 ::-moz-selection {
-  color: white;
-  background: #9747FF;
+  color: white !important;
+  background: #9747ff63;
 }
