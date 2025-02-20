@@ -1,17 +1,20 @@
 .aboutSection {
-  padding: 6rem 2rem;
+  padding: 3rem 1rem;
   background-image: url("../public/assets/aboutbg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   /* background: linear-gradient(to bottom, #1a1a1a, #2d2d2d); */
   color: white;
-  height: 100vh;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .title {
@@ -26,14 +29,17 @@
 
 .content {
   display: flex;
-  gap: 4rem;
-  align-items: center;
-  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
 }
 
 .imageContainer {
   position: absolute;
-  right: 0%;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .image {
@@ -45,28 +51,25 @@
 } */
 
 .cardsContainer {
-  /* flex: 1;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1.5rem;
-  min-width: 300px; */
-  /* flex: 1; */
-  display: flex;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  width: 95% !important;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .card {
   background: #121212;
   border-radius: 15px;
-  padding: 2rem 1rem;
-  transition: all 0.3sease;
+  padding: 1.5rem 1rem;
+  transition: all 0.3s ease;
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   cursor: pointer;
-  height: 323px;
-  width: 85%;
+  height: auto;
+  min-height: 280px;
+  width: 100%;
 }
 
 .card:hover {
@@ -136,16 +139,61 @@
   text-align: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+  .imageContainer {
+    position: static;
+    transform: none;
+    margin-top: 2rem;
+    text-align: center;
+  }
+
   .content {
     flex-direction: column;
   }
 
-  /* .imageContainer {
-    width: 100%;
-  } */
+  .cardsContainer {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutSection {
+    padding: 2rem 1rem;
+  }
+
+  .gradientText {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .subheading {
+    font-size: 18px;
+  }
 
   .cardsContainer {
-    width: 100%;
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    min-height: 250px;
+  }
+
+  .cardDescription {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutSection {
+    padding: 1.5rem 0.5rem;
+  }
+
+  .gradientText {
+    font-size: 28px;
+  }
+
+  .subheading {
+    font-size: 16px;
   }
 }
