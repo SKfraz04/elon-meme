@@ -12,7 +12,7 @@ const Hero: React.FC = () => {
   const particlesInit = useCallback(async (engine: Engine) => {
     await loadSlim(engine);
   }, []);
-  
+  const getRoot = window.location.origin;
 
   const handleCopy = (ContractAdr: string) => {
     toast.success('Copied...');
