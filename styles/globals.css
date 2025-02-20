@@ -192,8 +192,20 @@ html {
     position: static;
     top: 0;
   }
-
+  .hero-section {
+    background: url('/assets/hero_bg2.png');
+  }
   .PartnerImage {
     display: none;
   }
+}
+::selection {
+  color: white;
+  background: #9747FF;
+}
+
+/* For Firefox */
+::-moz-selection {
+  color: white;
+  background: #9747FF;
 }
