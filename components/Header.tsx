@@ -81,7 +81,8 @@ const Header: React.FC = () => {
             <motion.a
               whileHover={{ y: -2 }}
               className="text-gray-300 transition-colors hover:gradient-text font-magistral"
-              href="/assets/IELON-WHITEPAPER.pdf"
+              // href="/assets/IELON-WHITEPAPER.pdf"
+              href='https://ielon-whitepaper.vercel.app/docs/Introduction'
               target="_blank"
               rel="noopener noreferrer"
             >
