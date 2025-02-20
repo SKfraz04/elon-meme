@@ -1,40 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# IELON MEME TOKEN
 
-## Getting Started
+## Introduction
+Inspector Elon (IELON) is a community-driven meme token built on the Solana blockchain. It aims to blend humor, blockchain technology, and financial empowerment while addressing inefficiencies in government spending. IELON is a meme coin with a mission—not just entertainment, but a movement.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Token Details
+- **Token Name:** Inspector Elon  
+- **Symbol:** IELON  
+- **Decimals:** 9  
+- **Total Supply:** 500,000,000  
+- **Burnable:** Yes  
+- **Minting:** No further minting to prevent dilution  
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+With its fixed supply and deflationary features, IELON is designed for long-term value and sustainability.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+---
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Why Solana?
+IELON leverages Solana’s high-performance blockchain for:
+- **Lightning-Fast Transactions:** Capable of processing 65,000+ transactions per second.
+- **Low Transaction Costs:** Average fees under $0.001 per transaction.
+- **Scalability:** Seamless, congestion-free transactions.
+- **Security & Transparency:** Robust infrastructure with open-source smart contracts.
+- **Energy Efficiency:** Reduced environmental impact through Solana’s Proof-of-Stake model.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Roadmap
+### Q1 2025
+- Community Building on X/Twitter
+- Private Sale with Premium Community Members
+- Public Sale with Community
+- Website Development
 
-## Learn More
+### Q2 2025
+- DEX Launch
+- IELON Token Smart Contract Deployment
+- Security Audit Completion
+- Meme Contest Platform Launch
+- Social Media Expansion
 
-To learn more about Next.js, take a look at the following resources:
+### Q3 2025
+- Governance Token Distribution
+- Virtual Government Office Launch
+- Bureaucracy-Themed NFT Collection
+- Meme Voting System Implementation
+- Community Treasury Establishment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Disclaimer
+IELON is strictly a meme utility token with no intrinsic value or expectations of financial return. It is not a financial service, security, e-money, or fiat-backed token. IELON is created purely for entertainment and engagement purposes. Use at your own risk.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Security and Transparency
+IELON smart contracts are open-source, security audited, and non-modifiable. The project prioritizes trust and integrity, ensuring resistance to vulnerabilities and malicious attacks.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+---
+
+For more details, please check the [Whitepaper](#) or visit our [Website](#).
+
