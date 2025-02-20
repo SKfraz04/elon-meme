@@ -71,7 +71,6 @@ const About = () => {
                 <p className={styles.cardDescription}>{card.description}</p>
               </motion.div>
             ))}
-          </div>
           <motion.div 
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -87,6 +86,7 @@ const About = () => {
               priority
             />
           </motion.div>
+          </div>
         </div>
       </div>
     </section>
