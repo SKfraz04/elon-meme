@@ -12,11 +12,11 @@ ChartJS.register(ArcElement, Tooltip, Legend, ChartDataLabels);
 
 const tokenData = {
   labels: [
-    'Team & Advisors (15%)',
-    'Community & Marketing (25%)',
-    'Liquidity Pool (30%)',
-    'Development Fund (20%)',
-    'Private Sale (10%)',
+    'Team & Advisors',
+    'Community & Marketing',
+    'Liquidity Pool',
+    'Development Fund',
+    'Private Sale',
   ],
   datasets: [
     {
@@ -48,7 +48,7 @@ const tokenData = {
 };
 
 const TokenAllocation: React.FC = () => {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [hoveredIndex, setHoveredIndex] = useState < number | null > (null);
 
   const options = {
     plugins: {
@@ -72,7 +72,7 @@ const TokenAllocation: React.FC = () => {
       },
       tooltip: {
         callbacks: {
-          label: function(context: any) {
+          label: function (context: any) {
             return `${context.label}: ${context.raw}%`;
           }
         },
@@ -103,38 +103,49 @@ const TokenAllocation: React.FC = () => {
 
   return (
     <div className="token-allocation" id="token-allocation">
-    <div className="token-allocation-container">
-      <h2 className="uppercase title GradientText">TOKEN ALLOCATION</h2>
-      <p className="description font-['Bruno_Ace_SC']">
-        OUR TOKEN DISTRIBUTION IS CAREFULLY DESIGNED TO ENSURE LONG-TERM 
-        SUSTAINABILITY AND FAIR DISTRIBUTION ACROSS DIFFERENT STAKEHOLDERS.
-      </p>
-      
-      <div className="content-wrapper">
-        <div className="timeline-section">
-          {tokenData.labels.map((label, index) => (
-            <div key={index} className="timeline-item">
-              <div className="timeline-dot"></div>
-              <div className="timeline-content">
-                <h3 className='uppercase GradientText'>{label}</h3>
-                <p>{tokenData.datasets[0].discription[index]}</p>
+      <div className='flex justify-end items-center'>
+        <img
+          src='/assets/Blueshadow.png'
+          alt='tokenomics'
+          className='h-full w-50'
+          style={{
+            position: 'absolute',
+            transform: 'rotate(180deg)'
+          }}
+        />
+      </div>
+      <div className="token-allocation-container">
+        <h2 className="uppercase title GradientText">TOKEN ALLOCATION</h2>
+        <p className="description font-['Bruno_Ace_SC']">
+          OUR TOKEN DISTRIBUTION IS CAREFULLY DESIGNED TO ENSURE LONG-TERM
+          SUSTAINABILITY AND FAIR DISTRIBUTION ACROSS DIFFERENT STAKEHOLDERS.
+        </p>
+
+        <div className="content-wrapper">
+          <div className="timeline-section">
+            {tokenData.labels.map((label, index) => (
+              <div key={index} className="timeline-item">
+                <div className="timeline-dot"> <div className="timeline-dot2"></div></div>
+                <div className="timeline-content">
+                  <h3 className='uppercase GradientText'>{label}</h3>
+                  <p>{tokenData.datasets[0].discription[index]}</p>
+                </div>
               </div>
+            ))}
+          </div>
+
+          <div className="chart-section">
+            <div className="chart-container">
+              <Pie
+                data={tokenData}
+                options={options}
+              />
             </div>
-          ))}
-        </div>
-        
-        <div className="chart-section">
-          <div className="chart-container">
-            <Pie 
-              data={tokenData} 
-              options={options}
-            />
           </div>
         </div>
       </div>
-    </div>
-      
-    <style jsx>{`
+
+      <style jsx>{`
       .token-allocation {
         padding: 4rem 2rem;
         background-color: #000000;
@@ -192,6 +203,9 @@ const TokenAllocation: React.FC = () => {
         margin-bottom: 2.5rem;
         position: relative;
       }
+          .timeline-item:last-child {
+        margin-bottom: 0px;
+      }
 
       .timeline-dot {
         width: 16px;
@@ -199,8 +213,21 @@ const TokenAllocation: React.FC = () => {
         background: #8B5CF6;
         border-radius: 50%;
         margin-right: 2rem;
+        margin-top: 28px;
+        flex-shrink: 0;
+          display:flex;
+              justify-content:center;
+              align-items:center;
+      }
+              .timeline-dot2 {
+            
+        width: 10px;
+        height: 10px;
+        background: #ffffff;
+        border-radius: 50%;
         flex-shrink: 0;
       }
+
 
       .timeline-content {
         background: rgba(255, 255, 255, 0.05);
@@ -265,7 +292,7 @@ const TokenAllocation: React.FC = () => {
         }
       }
     `}</style>
-  </div>  );
+    </div>);
 };
 
 export default TokenAllocation; 

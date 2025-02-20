@@ -15,8 +15,8 @@ const CoinDetails = () => {
 
   return (
     <section className="py-16">
-      <div className="container px-4 mx-auto">
                     <img src='/assets/Blueshadow.png' alt='tokenomics' className='h-full w-50' style={{position: 'absolute'}} />
+      <div className="container px-4 mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
