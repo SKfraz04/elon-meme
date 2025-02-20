@@ -48,7 +48,7 @@ const Gallery = () => {
         <h2 className="mb-12 text-4xl font-bold text-center GradientText uppercase font-['Bruno_Ace_SC']">
           Our Gallery
         </h2>
-        <Image src="/assets/SliderShadowL.png" alt="Gallery" fill />
+        {/* <Image src="/assets/SliderShadowL.png" alt="Gallery" fill /> */}
         <Swiper
           modules={[Autoplay]}
           spaceBetween={20}
