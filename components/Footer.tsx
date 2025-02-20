@@ -7,7 +7,7 @@ const Footer = () => {
         <div className=" text-center">
          
           <div>
-            <h3 className="text-xl font-bold mb-4">Join The Investigation!</h3>
+            <h3 className="text-xl font-bold mb-4 CommonText gradient-text">Join The Investigation!</h3>
             <div className="flex items-center justify-center space-x-4">
           <a href="/" target="_blank" rel="noopener noreferrer" 
             className="text-white hover:text-primary-500 transition-colors">
@@ -29,7 +29,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-gray-800 text-center">
-          <p className="text-gray-300">© {new Date().getFullYear()} IELON. All rights reserved.</p>
+          <p className="text-gray-300 font-poppins">© {new Date().getFullYear()} IELON. All rights reserved.</p>
         </div>
       </div>
     </footer>

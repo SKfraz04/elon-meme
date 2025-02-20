@@ -12,7 +12,6 @@ const Roadmap: React.FC = () => {
         'Community Building on X/Twitter',
         'Meme Creation Campaign Launch'
       ],
-      status: 'upcoming'
     },
     {
       phase: 'Phase 2: Community Growth',
@@ -24,7 +23,6 @@ const Roadmap: React.FC = () => {
         'Bureaucracy-themed NFT Collection',
         'Social Media Expansion'
       ],
-      status: 'upcoming'
     },
     {
       phase: 'Phase 3: Market Entry',
@@ -36,7 +34,6 @@ const Roadmap: React.FC = () => {
         'Meme Voting System Implementation',
         'Community Treasury Establishment'
       ],
-      status: 'upcoming'
     },
     {
       phase: 'Phase 4: Utility Expansion',
@@ -48,7 +45,6 @@ const Roadmap: React.FC = () => {
         'Bureaucrat NFT Staking',
         'Efficiency Mining Program'
       ],
-      status: 'upcoming'
     },
     {
       phase: 'Phase 5: Ecosystem Growth',
@@ -60,7 +56,6 @@ const Roadmap: React.FC = () => {
         'Automated Bureaucracy System',
         'Global Marketing Campaign'
       ],
-      status: 'upcoming'
     },
     {
       phase: 'Phase 6: Innovation',
@@ -72,29 +67,25 @@ const Roadmap: React.FC = () => {
         'Department of Government Efficency (DOGE) Yield Farming',
         'Real-World Efficiency Partnerships'
       ],
-      status: 'upcoming'
     }
   ];
 
   return (
     <div className="roadmap">
       <div className="roadmap-container">
-        <h2 className={`title gradient-text`}>Roadmap</h2>
-        <p className="description">
-          Our strategic roadmap outlines the key milestones and development phases 
+        <h2 className={`title GradientText`}>Roadmap</h2>
+        <p className="description CommonText">
+          Our strategic roadmap outlines the key milestones and development phases
           that will drive our project's growth and success.
         </p>
 
         <div className="timeline">
           {roadmapData.map((phase, index) => (
-            <div key={index} className={`timeline-item ${phase.status}`}>
+            <div key={index} className={`timeline-item`}>
               <div className="timeline-content">
                 <div className="phase-header">
-                  <h3>{phase.phase}</h3>
+                  <h3 className='roadmap-title'>{phase.phase}</h3>
                   <span className="quarter">{phase.quarter}</span>
-                  <span className={`status-badge ${phase.status}`}>
-                    {phase.status.charAt(0).toUpperCase() + phase.status.slice(1)}
-                  </span>
                 </div>
                 <ul className="milestone-list">
                   {phase.items.map((item, itemIndex) => (
@@ -161,7 +152,14 @@ const Roadmap: React.FC = () => {
           transform: translateY(-5px);
           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
-
+.roadmap-title{
+font-family: 'Bruno Ace SC', serif;
+font-size: 15px;
+  background: linear-gradient(91.66deg, #9747FF 31.42%, #4F99FF 75.21%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
         .phase-header {
           margin-bottom: 1.5rem;
           position: relative;
@@ -174,7 +172,7 @@ const Roadmap: React.FC = () => {
         }
 
         .quarter {
-          color: #ffffff;
+          color: rgba(255, 255, 255, 0.6);
           opacity: 0.7;
           font-size: 0.9rem;
           display: block;
@@ -223,7 +221,7 @@ const Roadmap: React.FC = () => {
           content: "•";
           position: absolute;
           left: 0;
-          color: #36a2ff;
+          color: #ffffff;
         }
 
         .timeline-item.completed {

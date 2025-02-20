@@ -31,15 +31,25 @@ const Partners = () => {
   ];
 
   return (
-    <section className="patners-section">
+    <section className="partners-section py-8 md:py-16">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">Our Trusted Partners</h2>
-        
+        <h2 className="text-3xl md:text-4xl font-bold GradientText text-center mb-8 md:mb-12 PartnerTitle ">
+          Our Trusted Partners
+        </h2>
+        <div className="PartnerImage">
+          <Image 
+            src="/assets/PartnerElon.png" 
+            alt="Partners" 
+            width={460} 
+            height={230} 
+            className="ms-2" 
+          />
+        </div>
         <div className={styles.slider}>
           <div className={styles.slideTrack}>
             {[...partners, ...partners].map((partner, index) => (
               <div key={index} className={styles.slide}>
-                <div className="relative w-32 h-20">
+                <div className="relative w-24 md:w-32 h-16 md:h-20">
                   <Image
                     src={partner.logo}
                     alt={partner.name}
