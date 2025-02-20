@@ -133,7 +133,6 @@ const TokenAllocation: React.FC = () => {
               </div>
             ))}
           </div>
-
           <div className="chart-section">
             <div className="chart-container">
               <Pie
@@ -144,7 +143,6 @@ const TokenAllocation: React.FC = () => {
           </div>
         </div>
       </div>
-
       <style jsx>{`
       .token-allocation {
         padding: 4rem 2rem;
