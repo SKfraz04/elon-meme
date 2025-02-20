@@ -3,8 +3,15 @@ import { FaFacebook, FaTelegram } from "react-icons/fa";
 import { RiTwitterXFill } from "react-icons/ri";
 const Footer = () => {
   return (
-    <footer className="py-8 text-white bg-black/80">
-      <div className="container px-4 mx-auto">
+    <footer className="relative py-8 text-white bg-black/80">
+        <Image 
+          src='/assets/elonRocket.png' 
+          alt='rocket' 
+          width={330} 
+          height={600}
+          className="object-contain absolute bottom-0 left-0 h-[315px] w-[219px] overflow-hidden hidden md:block"
+        />
+      <div className="container relative px-4 mx-auto">
         <div className="text-center">
 
           <div>

@@ -20,7 +20,7 @@ const faqData: FAQItem[] = [
     },
     {
         question: "What Makes IELON Different from Other Meme Coins?",
-        answer: "Unlike typical meme coins, IELON has a mission—to expose inefficiencies in government spending in a fun and engaging way. We blend humor, blockchain technology, and community engagement to create a meme movement rather than just another token. Plus, no further minting ensures that your bags don’t get diluted!"
+        answer: "Unlike typical meme coins, IELON has a mission—to expose inefficiencies in government spending in a fun and engaging way. We blend humor, blockchain technology, and community engagement to create a meme movement rather than just another token. Plus, no further minting ensures that your bags don't get diluted!"
     },
     {
         question: "Is Inspector Elon (IELON) Safe?",
@@ -37,9 +37,25 @@ const FAQ = () => {
 
     return (
         <section className={styles.faqSection} id="faqs">
-            <div className='relative'>
-                <Image src="/assets/FAQLogo.png" alt="FAQ Background" width={561} height={280} className='absolute right-0 bottom-0 me-7' />
-            </div>
+                <motion.div
+                    animate={{
+                        y: [0, -20, 0],
+                    }}
+                    transition={{
+                        duration: 4,
+                        repeat: Infinity,
+                        ease: "easeInOut"
+                    }}
+                     className={` ${styles.FaqFlite}`}
+                >
+                    <Image 
+                        src="/assets/FAQLogo.png" 
+                        alt="FAQ Background" 
+                        width={561} 
+                        height={280} 
+                        className='' 
+                    />
+                </motion.div>
             <div className={styles.container}>
                 <h2 className={styles.title}>Frequently Asked Questions</h2>
                 <div className={styles.faqContainer}>
