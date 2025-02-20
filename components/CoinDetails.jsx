@@ -27,8 +27,8 @@ const CoinDetails = () => {
             animate={{ scale: 1 }}
             className="relative"
           >
-            <div className="relative mx-auto w-3/4 aspect-square">
-              <img src='/assets/token2.png' alt='tokenomics' className='w-full h-full' />
+            <div className="relative mx-auto aspect-square">
+              <img src='/assets/token2.png' alt='tokenomics' className='w-75' />
             </div>
           </motion.div>
           <div className="space-y-6">

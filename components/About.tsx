@@ -17,12 +17,12 @@ const About = () => {
     {
       title: "Meme Power",
       description: "Harnessing the power of viral memes to bring transparency to public finances.",
-      icon: <Image src="/assets/MemePower.svg" alt="Mission" width={81} height={81} />
+      icon: <Image src="/assets/Memepower.svg" alt="Mission" width={81} height={81} />
     },
     {
       title: "Crypto Sleuths",
       description: "Utilizing blockchain and AI to expose inefficiencies and hold agencies accountable.",
-      icon: <Image src="/assets/CryptoSleuths.svg" alt="Mission" width={81} height={81} />
+      icon: <Image src="/assets/cryptosleuths.svg" alt="Mission" width={81} height={81} />
     }
   ];
 
