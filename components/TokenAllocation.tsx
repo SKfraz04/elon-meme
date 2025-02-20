@@ -12,11 +12,11 @@ ChartJS.register(ArcElement, Tooltip, Legend, ChartDataLabels);
 
 const tokenData = {
   labels: [
-    'Team & Advisors',
-    'Community & Marketing',
-    'Liquidity Pool',
-    'Development Fund',
-    'Private Sale',
+    'Team & Advisors (15%)',
+    'Community & Marketing (25%)',
+    'Liquidity Pool (30%)',
+    'Development Fund (20%)',
+    'Private Sale (10%)',
   ],
   datasets: [
     {

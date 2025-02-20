@@ -146,8 +146,7 @@ const CoinDetails = () => {
           id="contract"
         >
           <h3 className="mb-5 GradientText">Solana Contract Address</h3>
-          <p className='mx-auto mb-5 w-3/4 text-gray-400'>Inspector Elon (IELON) is designed to revolutionize cryptocurrency management with enterprise-grade security, intuitive controls, and a commitment to recovering misused public funds. It is not intended to function as an investment opportunity, investment contract, or security of any kind. IELON operates independently and is not affiliated with any political campaign, political office, or governmental entity.</p>
-          <div className="inline-flex items-center px-8 py-2 rounded-lg bg-gray-800/50">
+          <div className="inline-flex items-center px-8 py-2 mb-5 rounded-lg bg-gray-800/50">
             <span className="mr-2 text-white">{ContractAdr.slice(0, 5)}...{ContractAdr.slice(-5)}</span>
             <button
               onClick={() => {
@@ -167,6 +166,7 @@ const CoinDetails = () => {
               Copied to clipboard!
             </motion.p>
           )}
+          <p className='mx-auto w-3/4 text-gray-400'>Inspector Elon (IELON) is designed to revolutionize cryptocurrency management with enterprise-grade security, intuitive controls, and a commitment to recovering misused public funds. It is not intended to function as an investment opportunity, investment contract, or security of any kind. IELON operates independently and is not affiliated with any political campaign, political office, or governmental entity.</p>
         </motion.div>
       </div>
       <div className='flex justify-end items-center'>
