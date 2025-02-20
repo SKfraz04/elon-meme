@@ -95,4 +95,23 @@
     .answer {
         padding: 0 15px 15px;
     }
-} 
+}
+
+.FaqFlite {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    position: relative;
+}
+
+.FaqFlite img {
+    position: absolute;
+    top: -200px;
+    right: 0;
+    margin-right: 20px;
+}
+@media (max-width: 768px) {
+    .FaqFlite img {
+        position: static;
+    }
+}

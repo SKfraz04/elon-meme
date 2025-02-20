@@ -66,6 +66,7 @@ const Header: React.FC = () => {
               { name: "Tokenomic", href: "#token-allocation" },
               { name: "TokenUtility", href: "#token-utility" },
               { name: "Faqs", href: "#faqs" },
+              { name: "Contract", href: "#contract" },
             ].map((item) => (
               <motion.a
                 key={item.name}
