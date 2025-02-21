@@ -3,71 +3,70 @@ import React from 'react';
 const Roadmap: React.FC = () => {
   const roadmapData = [
     {
-      phase: 'Phase 1: Foundation',
+      phase: 'Phase 1: Foundation & Community Building',
       quarter: 'Q1 2025',
       items: [
-        'Initial Department of Government Efficency (DOGE) Token Development',
-        'Smart Contract Architecture Design',
-        'Core Team Assembly',
-        'Community Building on X/Twitter',
-        'Meme Creation Campaign Launch'
+        'Private Sale exclusively for premium community members to foster loyalty.',
+        'Public Sale open to the broader community, ensuring wide participation.',
+        'Community engagement begins with X/Twitter initiatives to build a strong base.',
+        'Development and launch of the official website to establish an online presence.',
       ],
     },
     {
-      phase: 'Phase 2: Community Growth',
+      phase: 'Phase 2: Scaling & Infrastructure Development',
       quarter: 'Q2 2025',
       items: [
-        'DGE Token Smart Contract Deployment',
-        'Security Audit Completion',
-        'Meme Contest Platform Launch',
-        'Bureaucracy-themed NFT Collection',
-        'Social Media Expansion'
+        'DEX Launch for seamless trading and liquidity.',
+        'Deployment of the IELON Token Smart Contract, securing the foundation of the ecosystem.',
+        'Completion of a comprehensive security audit to ensure trust and reliability.',
+        'Launch of the Meme Contest Platform, merging creativity with engagement.',
+        'Social media expansion to reach larger audiences and amplify brand presence.'
       ],
     },
     {
-      phase: 'Phase 3: Market Entry',
+      phase: 'Phase 3: Innovation & Ecosystem Expansion',
       quarter: 'Q3 2025',
       items: [
-        'DEX Listing Campaign',
-        'Governance Token Distribution',
-        'Virtual Government Office Launch',
-        'Meme Voting System Implementation',
-        'Community Treasury Establishment'
+        'Distribution of the Governance Token, enabling decentralized decision-making.',
+        'Launch of the Virtual Government Office, a unique, interactive concept.',
+        'Introduction of a Bureaucracy-Themed NFT Collection to celebrate and satirize governance.',
+        "Implementation of a Meme Voting System, empowering the community to shape the platform's future.",
+        'Establishment of the Community Treasury for funding and rewarding community-driven initiatives.'
       ],
     },
-    {
-      phase: 'Phase 4: Utility Expansion',
-      quarter: 'Q4 2025',
-      items: [
-        'Department of Government Efficency (DOGE) Staking Program',
-        'Red Tape Reduction Protocol',
-        'Cross-chain Bridge Development',
-        'Bureaucrat NFT Staking',
-        'Efficiency Mining Program'
-      ],
-    },
-    {
-      phase: 'Phase 5: Ecosystem Growth',
-      quarter: 'Q1 2026',
-      items: [
-        'Department of Government Efficency (DOGE) DAO Implementation',
-        'Mobile DApp Launch',
-        'Partnerships with Other Meme Projects',
-        'Automated Bureaucracy System',
-        'Global Marketing Campaign'
-      ],
-    },
-    {
-      phase: 'Phase 6: Innovation',
-      quarter: 'Q2 2026',
-      items: [
-        'AI-Powered Meme Generator',
-        'Virtual Government Metaverse',
-        'Cross-Project Governance Integration',
-        'Department of Government Efficency (DOGE) Yield Farming',
-        'Real-World Efficiency Partnerships'
-      ],
-    }
+    // {
+    //   phase: 'Phase 4: Utility Expansion',
+    //   quarter: 'Q4 2025',
+    //   items: [
+    //     'Department of Government Efficency (DOGE) Staking Program',
+    //     'Red Tape Reduction Protocol',
+    //     'Cross-chain Bridge Development',
+    //     'Bureaucrat NFT Staking',
+    //     'Efficiency Mining Program'
+    //   ],
+    // },
+    // {
+    //   phase: 'Phase 5: Ecosystem Growth',
+    //   quarter: 'Q1 2026',
+    //   items: [
+    //     'Department of Government Efficency (DOGE) DAO Implementation',
+    //     'Mobile DApp Launch',
+    //     'Partnerships with Other Meme Projects',
+    //     'Automated Bureaucracy System',
+    //     'Global Marketing Campaign'
+    //   ],
+    // },
+    // {
+    //   phase: 'Phase 6: Innovation',
+    //   quarter: 'Q2 2026',
+    //   items: [
+    //     'AI-Powered Meme Generator',
+    //     'Virtual Government Metaverse',
+    //     'Cross-Project Governance Integration',
+    //     'Department of Government Efficency (DOGE) Yield Farming',
+    //     'Real-World Efficiency Partnerships'
+    //   ],
+    // }
   ];
 
   return (

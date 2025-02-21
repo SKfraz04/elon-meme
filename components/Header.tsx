@@ -12,6 +12,7 @@ const righteous = Righteous({
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
@@ -63,10 +64,11 @@ const Header: React.FC = () => {
           <div className="flex space-x-8">
             {[
               { name: "About", href: "#about" },
+              { name: "How to buy", href: "#how-to-buy" },
               { name: "Tokenomic", href: "#token-allocation" },
               { name: "TokenUtility", href: "#token-utility" },
               { name: "Faqs", href: "#faqs" },
-              { name: "Contract", href: "#contract" },
+              // { name: "Contract", href: "#contract" },
             ].map((item) => (
               <motion.a
                 key={item.name}
@@ -78,19 +80,51 @@ const Header: React.FC = () => {
                 {item.name}
               </motion.a>
             ))}
-            <motion.a
-              whileHover={{ y: -2 }}
-              className="text-gray-300 transition-colors hover:gradient-text font-magistral"
-              // href="/assets/IELON-WHITEPAPER.pdf"
-              href='https://ielon-whitepaper.vercel.app/docs/Introduction'
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Whitepaper
-            </motion.a>
+            
+            {/* More Dropdown */}
+            <div className="relative">
+              <motion.button
+                whileHover={{ y: -2 }}
+                className="text-gray-300 transition-colors hover:gradient-text font-magistral"
+                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+              >
+                More ▼
+              </motion.button>
+              
+              {isDropdownOpen && (
+                <div className="absolute top-full right-0 mt-2 w-48 bg-black/90 backdrop-blur-md rounded-lg shadow-lg py-2">
+                  <motion.a
+                    whileHover={{ y: -2 }}
+                    className="block px-4 py-2 text-gray-300 hover:gradient-text font-magistral"
+                    href='https://ielon-whitepaper.vercel.app/docs/Introduction'
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Whitepaper
+                  </motion.a>
+                  <motion.a
+                    whileHover={{ y: -2 }}
+                    className="block px-4 py-2 text-gray-300 hover:gradient-text font-magistral"
+                    href='#contract'
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Contract            
+                  </motion.a>
+                  <motion.a
+                    whileHover={{ y: -2 }}
+                    className="block px-4 py-2 text-gray-300 hover:gradient-text font-magistral"
+                    href='#contract'
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Contract            
+                  </motion.a>
+                </div>
+              )}
+            </div>
           </div>
         </div>
-
         {/* Mobile menu overlay */}
         {isMenuOpen && (
           <div className="fixed inset-0 z-40 backdrop-blur-md md:hidden bg-black/95">
@@ -117,7 +151,7 @@ const Header: React.FC = () => {
               <motion.a
                 whileHover={{ y: -2 }}
                 className="text-xl text-gray-300 transition-colors hover:gradient-text font-magistral"
-                href="/assets/IELON-WHITEPAPER.pdf"
+                href='https://ielon-whitepaper.vercel.app/docs/Introduction'
                 target="_blank"
                 rel="noopener noreferrer"
               >

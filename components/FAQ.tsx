@@ -16,7 +16,7 @@ const faqData: FAQItem[] = [
     },
     {
         question: "Where Can I Buy IELON?",
-        answer: "Once launched, IELON will be available on Solana-compatible decentralized exchanges (DEXs) such as: 'Raydium', 'Orca', 'Meteora'. We will announce the exact launch details and exchange listings on our official channels. Stay tuned!"
+        answer: "Once launched, IELON will be available on Solana-compatible decentralized exchanges (DEXs) such as: 'Raydium'. We will announce the exact launch details and exchange listings on our official channels. Stay tuned!"
     },
     {
         question: "What Makes IELON Different from Other Meme Coins?",
