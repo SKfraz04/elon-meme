@@ -26,7 +26,9 @@ const tokenData = {
         "Reserved for team members and advisors with a vesting period to ensure long-term commitment.",
         "Dedicated to community rewards, marketing initiatives, and ecosystem growth.",
         "Supports ongoing platform development, upgrades, and technical improvements.",
-        "Allocated to early supporters and strategic partners."],
+        "Allocated to early supporters and strategic partners.",
+        "Funds allocated for future development, strategic investments, operational costs, and long-term sustainability."
+      ],
       backgroundColor: [
         '#3B82F6', // Team & Advisors - blue
         '#4FD1C5', // Community & Marketing - teal
